@@ -18,8 +18,14 @@ public class TaskController {
 
 
     @PostMapping
-    public ResponseEntity create(@RequestBody TaskEntity taskEntity){
-        return  ResponseEntity.ok().body(taskRepository.save(taskEntity));
+    public ResponseEntity create(@RequestBody TaskRequestDto requestDto){
+        var task = TaskEntity.builder()
+                .Title(requestDto.title())
+                .notified(requestDto.notified())
+                .dueDate(requestDto.dueDate())
+                .Email(requestDto.email())
+                .build();
+        return  ResponseEntity.ok().body(taskRepository.save(task));
     }
 
 }

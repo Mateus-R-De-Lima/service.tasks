@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mateus-lima</groupId>
-	<artifactId>service.tasks</artifactId>
+	<artifactId>service-tasks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>service.tasks</name>
 	<description>Demo project for Spring Boot</description>
