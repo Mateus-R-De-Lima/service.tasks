@@ -10,7 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 
-@Entity
+@Entity(name = "TASKS")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,9 +21,11 @@ public class TaskEntity {
 
     private String Title;
 
+    private  String Email;
+
     private LocalDateTime dueDate;
 
-    private  boolean notifiend;
+    private  boolean notified;
 
     @CreationTimestamp
     private LocalDateTime createAt;
