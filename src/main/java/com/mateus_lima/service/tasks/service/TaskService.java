@@ -28,6 +28,7 @@ public class TaskService {
 
          notificationClient.sendNotifcation(request);
          taskEntity.setNotified(true);
+         taskRepository.save(taskEntity);
         }
     }
 }
